@@ -21,10 +21,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from dumpling device
 $(call inherit-product, device/oneplus/dumpling/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AOSiP stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_dumpling
+# Gapps
+TARGET_GAPPS_ARCH := arm64
+TARGET_BOOT_ANIMATION_RES := 1080
+IS_PHONE := true
+TARGET_MINIMAL_APPS := false
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+PRODUCT_NAME := aosip_dumpling
 PRODUCT_DEVICE := dumpling
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
