@@ -50,3 +50,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/walleye/walleye:8.1.0/OPM1.171019.021/4565141:user/release-keys
 
 TARGET_VENDOR := oneplus
+
+# Official-ify
+AOSIP_BUILDTYPE := CI
