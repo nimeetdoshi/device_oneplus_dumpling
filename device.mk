@@ -27,6 +27,9 @@ $(call inherit-product, vendor/oneplus/dumpling/dumpling-vendor.mk)
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
+# Setup Dalvik VM configurations
+$(call inherit-product, frameworks/native/build/phone-xhdpi-8192-dalvik-heap.mk)
+
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := 400dpi
